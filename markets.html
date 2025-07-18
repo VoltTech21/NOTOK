@@ -5,62 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Markets | $NOTOK</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Rubik', sans-serif;
-      background-color: #0e0e0e;
-      color: #f2f2f2;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #151515;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      border-bottom: 1px solid #222;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: #ff4d4d;
-    }
-
-    nav {
-      margin-top: 0.5rem;
-    }
-
-    nav a {
-      color: #aaa;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
     section {
       padding: 2rem 1rem;
       max-width: 900px;
       margin: auto;
-    }
-
-    h2 {
-      color: #ff4d4d;
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
     }
 
     .markets a {
@@ -75,6 +25,56 @@
       font-weight: 500;
       transition: background 0.2s ease;
     }
+
+    .markets a:hover {
+      background: #333;
+    }
+
+    code {
+      background: #1a1a1a;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>$NOTOK</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="community.html">Community</a>
+      <a href="markets.html">Markets</a>
+      <a href="media.html">Media</a>
+      <a href="price.html">Price</a>
+    </nav>
+    
+  </header>
+
+  <section>
+    <h2>Where to Buy $NOTOK</h2>
+    <p>
+      $NOTOK trades on decentralized Solana markets. Use the swap links below to buy, sell, or provide liquidity.
+    </p>
+
+    <div class="markets">
+      <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=7cdmB4rYSRGnUsB1QZ62oMYPtepAVJsdMfjki3Hyrjko" target="_blank">Swap on Raydium</a>
+      <a href="https://birdeye.so/token/7cdmB4rYSRGnUsB1QZ62oMYPtepAVJsdMfjki3Hyrjko" target="_blank">Birdeye Analytics</a>
+      <a href="https://dexscreener.com/solana/7cdmB4rYSRGnUsB1QZ62oMYPtepAVJsdMfjki3Hyrjko" target="_blank">Dexscreener</a>
+      <a href="https://solscan.io/token/7cdmB4rYSRGnUsB1QZ62oMYPtepAVJsdMfjki3Hyrjko" target="_blank">Solscan</a>
+    </div>
+
+    <h2>Token Contract</h2>
+    <p>
+      Solana Token Address:
+      <br>
+      <code>7cdmB4rYSRGnUsB1QZ62oMYPtepAVJsdMfjki3Hyrjko</code>
+    </p>
+
+    <h2>Tokenomics</h2>
+    <p>
 
     .markets a:hover {
       background: #333;
