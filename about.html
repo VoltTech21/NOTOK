@@ -5,34 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | $NOTOK</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Rubik', sans-serif;
-      background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
-      color: #f2f2f2;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    header {
-      background-color: #151515;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      border-bottom: 1px solid #222;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #ff4d4d;
-      letter-spacing: 1px;
-    }
-
     section {
       padding: 3rem 1rem;
       max-width: 900px;
@@ -41,16 +16,8 @@
     }
 
     h2 {
-      color: #ff4d4d;
-      font-size: 1.85rem;
-      margin-bottom: 1rem;
       border-left: 4px solid #ff4d4d;
       padding-left: 0.75rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
     }
 
     .quote {
@@ -74,13 +41,8 @@
     }
 
     footer {
-      background-color: #111;
-      color: #777;
-      text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      border-top: 1px solid #222;
-      margin-top: 4rem;
     }
 
     .section-card {
@@ -103,6 +65,54 @@
       font-weight: bold;
       transition: background 0.3s ease;
     }
+
+    .upload-link:hover {
+      background-color: #ff3333;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About $NOTOK</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="community.html">Community</a>
+      <a href="markets.html">Markets</a>
+      <a href="media.html">Media</a>
+      <a href="price.html">Price</a>
+    </nav>
+  </header>
+
+  <section class="section-card" id="origin">
+    <h2>How It Started</h2>
+    <p>
+      $NOTOK was born not out of hype, but out of burnout. We were tired of broken roadmaps, tired of influencers dumping on retail, and tired of pretending this space was still fun.
+    </p>
+    <p>
+      So we did what everyone else does when they're hanging on by a thread: made a meme.
+    </p>
+    <div class="quote">
+      “The market’s crashing. Our mental health is too. Might as well laugh about it.”
+    </div>
+  </section>
+
+  <section class="section-card" id="why">
+    <h2>Why $NOTOK?</h2>
+    <p>
+      This isn't a utility token. It's not a tech startup. It's a collective middle finger to grift, burnout, and empty promises. $NOTOK exists for:
+    </p>
+    <ul>
+      <li>Meme relief during market chaos</li>
+      <li>Community support for mental health causes</li>
+      <li>Honest vibes. No bullsh*t.</li>
+    </ul>
 
     .upload-link:hover {
       background-color: #ff3333;
@@ -164,7 +174,7 @@
     <p>
       Want to link $NOTOK or grab the brand assets? You can upload or access our logos, templates, and more on the page below.
     </p>
-    <a class="upload-link" href="www.wearenotok.us/about/media">🔗 Visit Logo & Brand Assets</a>
+    <a class="upload-link" href="https://www.wearenotok.us/about/media">🔗 Visit Logo & Brand Assets</a>
   </section>
 
   <footer>
