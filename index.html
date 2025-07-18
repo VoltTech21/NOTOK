@@ -3,30 +3,408 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$NOTOK</title>
+  <title>We Are | NOTOK</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .fire-text {
+      position: relative;
+      font-size: 3rem;
+      color: #ff4d4d;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-shadow:
+        0 0 5px #ff4d4d,
+        0 0 10px #ff0000,
+        0 0 20px #ff8000,
+        0 0 40px #ffa500,
+        0 0 60px #ffd700;
+      animation: flicker 2s infinite ease-in-out;
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        text-shadow:
+          0 0 5px #ff4d4d,
+          0 0 10px #ff0000,
+          0 0 20px #ff8000,
+          0 0 40px #ffa500,
+          0 0 60px #ffd700;
+      }
+      50% {
+        text-shadow:
+          0 0 2px #ff4d4d,
+          0 0 4px #ff0000,
+          0 0 8px #ff8000,
+          0 0 16px #ffa500,
+          0 0 24px #ffd700;
+      }
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      50% { transform: rotate(5deg); }
+      75% { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #0e0e0e;
+      color: #f2f2f2;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #151515;
+      position: sticky;
+      top: 2.2rem;
+      z-index: 9998;
+      padding: 0.75rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    nav a {
+      color: #ffb3b3;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #ff4d4d;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    header {
+      background-color: #151515;
+      padding: 3.2rem 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+
+    #price-ticker {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      background: #111;
+      overflow: hidden;
+      border-bottom: 2px solid #444;
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 0.95rem;
+      z-index: 9999;
+    }
+#community ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 0.75rem;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+
+    .scroll-wrapper {
+      white-space: nowrap;
+      animation: scroll-left 80s linear infinite;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .scroll-content {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+    }
+
+    .scroll-content span {
+      margin-right: 3rem;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .banner {
+  background: linear-gradient(to right, #5a0000, #1a1a1a);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideIn 1s ease forwards;
+    }
+
+    section:nth-of-type(even) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: #ff4d4d;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: #ffb3b3;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    .markets a,
+    ul a {
+      display: inline-block;
+      background: #1e1e1e;
+      padding: 0.7rem 1.3rem;
+      margin: 0.3rem 0.4rem;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s;
+    }
+
+    .markets a:hover,
+    ul a:hover {
+      background: #333;
+      transform: scale(1.05);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    
+
+    footer {
+      background-color: #111;
+      color: #777;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .banner {
+  background: linear-gradient(to right, #5a0000, #1a1a1a);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+      .scroll-wrapper {
+        animation-duration: 100s;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>$NOTOK</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="community.html">Community</a>
-      <a href="markets.html">Markets</a>
-      <a href="media.html">Media</a>
-      <a href="price.html">Price</a>
-    </nav>
-  </header>
 
-  <section>
-    <h2>index.html</h2>
-    <p>Welcome to $NOTOK.</p>
-  </section>
+<div id="price-ticker"><span>Loading $NOTOK...</span></div>
 
-  <footer>
-    <p>&copy; 2025 $NOTOK — Satire, Not Financial Advice.</p>
-  </footer>
+<header>
+  <h1 class="fire-text">$NOTOK <span style="animation: wiggle 0.6s infinite ease-in-out;">🔥</span></h1>
+</header>
+
+<nav>
+  <a href="/about">About</a>
+  <a href="/liveprice">Price</a>
+  <a href="/markets">Markets</a>
+  <a href="/joinus">Community</a>
+</nav>
+
+<section class="banner">
+  We Are NOTOK — But the Market makes us feel better.<br />Buy, Sell, and Burn.
+</section>
+
+
+<section id="about">
+  <h2>About $NOTOK</h2>
+  <p>
+    $NOTOK is a meme token on Solana, born out of collective burnout,
+    financial chaos, and existential dread. It’s not about utility — it’s a vibe.
+    No roadmap. No promises. Just memes and a community driven <strong>Therapy Fund</strong> to support mental health.
+  </p>
+</section>
+
+<section id="price">
+  <h2>Live Price Chart</h2>
+  <iframe height="400" width="100%" id="geckoterminal-embed" title="GeckoTerminal Embed"
+          src="https://www.geckoterminal.com/solana/pools/9zAm12v8hREeL31EBK9JjJ4p2Qqfbpsqp1ATJYhxLWk2?embed=1&info=1&swaps=0&grayscale=0&light_chart=0&chart_type=price&resolution=15m"
+          frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
+</section>
+
+<section id="markets" class="markets">
+  <h2>Trade $NOTOK</h2>
+  <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=7cdmB4rYSRGnUsB1QZ62oMYPtepAVJsdMfjki3Hyrjko" target="_blank">Raydium</a>
+  <a href="https://birdeye.so/token/7cdmB4rYSRGnUsB1QZ62oMYPtepAVJsdMfjki3Hyrjko" target="_blank">Birdeye</a>
+</section>
+
+<section id="community">
+  <h2>Join the Community</h2>
+  <ul>
+    <li><a href="https://x.com/notokcoin" target="_blank">X (Twitter)</a></li>
+    <li><a href="https://discord.gg/notokofficial" target="_blank">Discord</a></li>
+    <li><a href="https://reddit.com/r/notokcoin" target="_blank">Reddit</a></li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 $NOTOK — Satire, Not Financial Advice. Stay unwell, friends.
+</footer>
+
+
+
+<script>
+  const NOTOK_TOKEN = {
+    symbol: "NOTOK",
+    address: "7cdmB4rYSRGnUsB1QZ62oMYPtepAVJsdMfjki3Hyrjko"
+  };
+
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      'x-chain': 'solana',
+      'X-API-KEY': 'a2d991844fbd4cd79c72261f54cdfa06'
+    }
+  };
+
+  function formatTime(unixTime) {
+  const date = new Date(unixTime * 1000);
+  const time = date.toLocaleTimeString(undefined, {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  });
+  return `${time} CST`; // for display only, not actual TZ conversion
+}
+
+
+  async function fetchNOTOKData() {
+    const url = `https://public-api.birdeye.so/defi/price?address=${NOTOK_TOKEN.address}&ui_amount_mode=raw&check_liquidity=0&include_liquidity=true`;
+
+    try {
+      const res = await fetch(url, options);
+      const json = await res.json();
+
+      if (!json.success || !json.data) throw new Error(json.message || "No price data returned.");
+      const data = json.data;
+
+      const price = parseFloat(data.value).toFixed(9);
+      const change = parseFloat(data.priceChange24h || 0).toFixed(3);
+      const native = parseFloat(data.priceInNative || 0).toFixed(9);
+      const liquidity = parseFloat(data.liquidity || 0).toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+      const updated = formatTime(data.updateUnixTime);
+
+      const color = change > 0 ? "#00ffae" : change < 0 ? "#ff4d4d" : "#ccc";
+      const arrow = change > 0 ? "▲" : change < 0 ? "▼" : "–";
+
+      const ticker = document.getElementById("price-ticker");
+      ticker.innerHTML = `
+        <div class="scroll-wrapper">
+          <div class="scroll-content">
+            <span style="color:${color}; font-weight: 600; padding: 0.5rem 2rem;">
+              $${NOTOK_TOKEN.symbol}: <strong>$${price}</strong> ${arrow} ${change}%
+            </span>
+            <span style="padding: 0.5rem 2rem;">Liquidity: ${liquidity}</span>
+            <span style="padding: 0.5rem 2rem;">Price in SOL: ${native}</span>
+            <span style="padding: 0.5rem 2rem;">Updated: ${updated}</span>
+          </div>
+        </div>
+
+      `;
+    } catch (err) {
+      console.error("Ticker fetch error:", err);
+      document.getElementById("price-ticker").innerHTML = `
+        <div class="scroll-wrapper">
+          <div class="scroll-content">
+            <span style="color:#888; padding: 0.5rem 2rem;">$NOTOK Ticker unavailable</span>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  fetchNOTOKData();
+  setInterval(fetchNOTOKData, 60000); // every 1 minute
+
+</script>
 </body>
 </html>
