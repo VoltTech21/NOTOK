@@ -1,3 +1,138 @@
-<!-- media kit page HTML goes here -->
 <!DOCTYPE html>
-<html><head><title>media.html</title></head><body><h1>media.html</h1></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Kit | $NOTOK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #151515;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      color: #ff4d4d;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(255, 77, 77, 0.05);
+    }
+
+    h2 {
+      color: #ff4d4d;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    a.download-btn {
+      display: inline-block;
+      margin: 0.5rem 0 1.5rem;
+      padding: 0.75rem 1.25rem;
+      background-color: #ff4d4d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    a.download-btn:hover {
+      background-color: #ff3333;
+    }
+
+    input[type="file"] {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #444;
+      width: 100%;
+    }
+
+    footer {
+      background-color: #111;
+      color: #777;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+      margin-top: 4rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>$NOTOK Media & Brand Kit</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Download Assets</h2>
+      <p>
+        Need our logo? Download below and use however you’d like.
+      </p>
+      <a class="download-btn" href="https://drive.google.com/file/d/1mt5HUH50ju63V1XdTLsS8wrvhv80-j-b/view?usp=sharing" download>⬇️ Download Logo</a><br>
+      
+
+    
+
+    <div class="card">
+      <h2>Brand Guidelines</h2>
+      <p>
+        Keep it raw, honest, and unfiltered. That’s our vibe. If you're using the $NOTOK brand in your content:
+      </p>
+      <ul>
+        <li>Don’t fake partnerships or endorsements</li>
+        <li>No hate speech or harassment (satire ≠ abuse)</li>
+        <li>Have fun. That’s kind of the point.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 $NOTOK — Use responsibly. Meme excessively.</p>
+  </footer>
+
+</body>
+</html>
